@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM PART 1/3</title>
+
+    <script>
+        function change_h1(i){
+            let h1 = document.getElementsByTagName('h1')[0] // indico o elemento que eu vou alterar
+            h1.innerText = i.value // indico que vou alterar o texto do elemtno com base no elemento indicado
+        }
+
+        function hideh1(){
+            let h1 = document.getElementsByTagName('h1')[0]
+            h1.style.display = 'none'
+        }
+    </script>
+    <style>
+        div{
+            display: inline;
+            background-color: darkslateblue;
+            color: white;
+            padding: 20px;
+            font-size: 3rem;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>CLICK EM MIM</h1>
+
+    <div onclick="hideh1()" >CLICK</div>
+</body>
+</html>
+
+<!-- 
+DOM Events (Eventos do object model)
+bom vamos criar um um <h1> e dentro dessa tag vamos adicionar um atributo que dispara um evento, 
+<h1 oneclick="">, esse atributo disoara um evento de click, que eu posso mostrar quantas vezes clicaram
+passado o valor de console.log e ainda adicionar um mensagem refernte, <h1 oneclick="console.log('H1 FOI CLICADO')"
+Repare que há o uso de dois tipops de aspas, comum e dupla. Isso se dá por conta de se usar uma aspas duplas, 
+o console vai entender que o codigo terminou ali, por isso a necessidade de umas aspas diferente.
+E ao rodar o código vamos ver no console quantas vezes o texto foi clicado, acompanhando de uma mensagem.
+Podemos vazer esse processo por meio de função:
+damos o nome da função no código HTML<h1 onclick="h1click()">CLIQUE AQUI</h1>
+no JS abrimos a função function h1click(){console.log('Executando a função');}, que vai retornar os mesmo valores
+que anteriormente.
+
+
+<h1 onclick="console.log(this);">CLIQUE AQUI</h1>, ao ultilirmos this (vai depender muito do contexto) e vamos ver
+que o this se tranforma no proprio elemento, assim podemos fazer algumas brincadeiras no código.
+<h1 onclick="this.style.color = 'red'">CLIQUE AQUI</h1>, aqui eu que this(elemento).style(vai chamar style/css).color(chama 
+cor também) = 'red'(valor dentro de aspas simples). assim ao clicar no texto, automaticamente ele muda de cor.
+
+Agora oque vamos fazer é um pouco mais complexo, vamos digitar um valor no <input> e ele vai alterar o texto assim que eu clicar fora do <input> ou apertar enter. Para isso vamos primiro a fuinção:
+        function change_h1(){
+            let input = document.getElementById('texto') // indico o valor que o elemento vai receber
+	na variavel let(variavel local), indico que o valor vai ser baseado no <input> que tem o ID='texto', sendo o valor 
+	responsável por alterar o texto <h1>
+            let h1 = document.getElementsByTagName('h1')[0] // indico o elemento que eu vou alterar
+	outra váriavel let, para indicar o elemento alterado será o elemento com a tag name h1, e como o console
+	entende esse elemento como array, quero que seja o primeiro na posição[0].
+            h1.innerText = input.value // indico que vou alterar o texto do elemtno com base no elemento indicado
+	tendo base os dois elementos, um para receber valor e outro para ser alterado, vou falar que h1 vai ter seu texto 
+	selcionado por meio do innerText e que vai receber o valor da variável input(value)
+	}
+    <input id="texto" type="text" onchange="change_h1()">
+
+Ainda sim podemos deixar mais fáxil de entender, já que vimos que this se torna o elemnto, basta passar ele ao inves de 
+criar uma nova váriavel:
+        function change_h1(input){
+	como this vai identificar que input é o elemento, invés de criar a variavel, vamos passar ele como parametro da
+função, e o restante da função acontece de mandeira igual a anterior
+            let h1 = document.getElementsByTagName('h1')[0] // indico o elemento que eu vou alterar
+            h1.innerText = input.value // indico que vou alterar o texto do elemtno com base no elemento indicado
+        }
+    <input type="text" onchange="change_h1(this)">
+nesse caso this é usado para reconhecer o elemento, e não necessáriamente teria que usar input, poedria ser qualquer outro valor 
+senod passado, já que this reconehce:
+        function change_h1(i){
+            let h1 = document.getElementsByTagName('h1')[0] // indico o elemento que eu vou alterar
+            h1.innerText = i.value // indico que vou alterar o texto do elemtno com base no elemento indicado
+        }
+
+para criar um evento que atere o texto de forma automática vamos usar oninput:
+    <input type="text" oninput="change_h1(this)">, a operação vai ocorrer da mesma forma que antes, mas em tempo real
+sem necessidade de apertar enter ou clicar fora do <input>.
+
+Agora vamos testar outro evendo, que vai esconder o elemento h1 ao clicar, vamos começar pela função:
+        function hideh1(){
+            let h1 = document.getElementsByTagName('h1')[0]
+		indico o elemtno que vai ser alterado
+            h1.style.display = 'none'
+		indico que essa alteração vai ser em seu style/css, que vai recer o valor de display = none, ou seja,
+	para não aparecer mais na tela, dando a impressão que o botão clicl sobrepos o texto ao clicarmos nele
+        }
+CSS doo botão
+	div{ 
+            background-color: darkslateblue;
+		defino a cor de funto (fundo da letra)
+	    display: inline;
+		defino que essa cor de funda vai ficar presa ao meu texto, inline acompanha o texto na mesma linha, ocupando a 
+mesma área do elemento
+            color: white;
+		defino a cor da letra
+            padding: 20px;
+		defino que terá um espaçamento da minha letra em relação ao fundo, dando a impressão de um botão
+            font-size: 3rem;
+		defino o tamanho da fonte
+        }
+        <div onclick="hideh1()" >CLICK</div> 
+-->
+
+
+
+

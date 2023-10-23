@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMER E INTERVALO</title>
+    <script>
+        var n = 0
+        var n2 = 0
+        var intervalo
+        function atualizarNumero (){
+            let h = document.getElementsByTagName('h1')[0]
+            h.innerHTML += ' ' + n
+            n ++
+        }
+        function atualizarNumero2 (){
+            let h = document.getElementsByTagName('h2')[0]
+            h.innerHTML += ' ' + n2
+            n2 ++
+        }
+        function mudarcor(){
+            let h = document.getElementsByTagName('h1')[0]
+            h.style.color = 'blue'
+        }
+        function mudartexto(){
+            let h = document.getElementsByTagName('h1')[0]
+            h.innerHTML = 'Novo Titulo'
+            setTimeout(mudarcor, 1000);
+            setInterval(atualizarNumero, 1000)
+        }
+        function iniciar (){
+          intervalo = setInterval(atualizarNumero2, 500)
+        }
+        function parar(){
+            clearInterval(intervalo)
+        }
+    </script>
+</head>
+<body>
+    <h1>Titulo</h1>
+    <input type="submit" value="Mudar" onclick="mudartexto()">
+    <h2>Contando</h2>
+    <input type="submit" value="Inicar" onclick="iniciar()">
+    <input type="submit" value="Parar" onclick="parar()">
+</body>
+</html>

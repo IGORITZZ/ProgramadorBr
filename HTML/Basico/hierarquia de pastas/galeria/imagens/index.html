@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NOVA GALERIA</title>
+    </head>
+    <body>
+        <img src="fotos/download.jpeg" alt="">
+        <!-- indentifica a pasta do arquivo somente com o nome dela no inicio -->
+        <img src="./fotos/download (1).jpeg" alt="">
+        <!-- para localizar a pasta do arqui uma pasta a baixo usamos ./, que funciona do mesmo modo que o anterior -->
+        <img src="../../download (2).jpeg" alt="">
+        <!-- para localizar um arquivo que esta pasta acima(antes) usamos ../ para voltar uma pasta,
+        usei ../../ para voltar duas pastas até localizar o arquivo -->
+        <img src="/galeria/imagens/fotos/download (3).jpeg" alt="">
+        <!-- de forma mais complexa de ler usamos somente / até a pasta final do arquivo -->
+        <br>
+        <a href="/index.html">VOLTAR</a>
+    </body>
+</html>
+
+<!-- importente dizer que ao colocar um outro arquivo index.html em outra pasta, serve para 
+ao invés de colocarcmos o dominio com o nome da pasta aonde esta determinado arquivo, 
+não colocamos o final do dominio e ele retorna par o index.html mais proximo a pasta que esta
+o diretorio
+
+http://127.0.0.1:5500/galeria/imagens/index.html (inves de ser assim)
+http://127.0.0.1:5500/galeria/imagens/ (fica assim, e retorna a mesma pagina)-->

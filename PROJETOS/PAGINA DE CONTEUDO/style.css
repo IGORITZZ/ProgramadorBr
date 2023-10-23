@@ -1,0 +1,54 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: 555;
+}
+
+h1, h2{
+    color: 111;
+}
+
+.top-bar{
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 5px solid orange;
+}
+
+.container{
+    max-width: 888px;
+    margin: auto;
+    padding: 30px;
+}
+
+.headline{
+    font-size: 56px;
+    line-height: 64px;
+}
+
+.subititle{
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.author{
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+.social-icons{
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.social-icon{
+    width: 20px;
+    padding: 10px 10px 10px 0;
+}
+
+a{
+    text-decoration: none;
+}

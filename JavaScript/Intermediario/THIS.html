@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THIS</title>
+    <link rel="shortcut icon" href="../Basico/icons/jsicon.png" type="image/x-icon">
+    <script>
+        function loaded() {
+            let t1 = document.getElementById('t1')
+            let t2 = document.getElementById('t2')
+
+            t1.onclick = colocarEmMaisculo
+            t2.onclick = colocarEmMaisculo
+        }
+
+        function colocarEmMaisculo() {
+            this.innerHTML = this.innerHTML.toUpperCase()
+        }
+    </script>
+</head>
+
+<body onload="loaded()">
+    <h1 id="t1">titulo 1</h1>
+    <h2 id="t2">outro titulo</h2>
+</body>
+
+</html>
+
+<!-- 
+    Aqui vimo sum pouco mais de uma situação de usar o this, seria para alterar dois elemtnos HTML de forma separa, porem utilizando a mesma função.
+ -->
+
+<!-- 
+            function loaded() {
+            let t1 = document.getElementById('t1')
+            let t2 = document.getElementById('t2')
+
+            t1.onclick = colocarEmMaisculo
+            t2.onclick = colocarEmMaisculo
+        }
+        Nessa primeira função estou declarando os valores das variaveis, quais eventos serão feitos nessas variaveis, e também estou sitando as funções
+        atribuidas nessas variaveis quando ocorrer o evento.
+ -->
+ <!-- 
+            function colocarEmMaisculo() {
+            this.innerHTML = this.innerHTML.toUpperCase()
+        }
+        aqui é bem simples this literalmete siguinifica "isso", mas antes temos que entender o contexto.
+        nesse casso "isso" se refere ao elementos de texto que retornam do inner.HTML
+        Vamos tentar entender isso.innerHTML recebe isso.textoHTML(inner.HTML).toUpperCase()
+        Nesse caso toUpperCase() parece ser uma função mas não é necessáriamente, vai fazer com quer os elementos que estejam em this, fiquem em maisculo
+  -->

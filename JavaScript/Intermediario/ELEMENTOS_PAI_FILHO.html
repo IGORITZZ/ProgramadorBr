@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Pai e Filho</title>
+    <link rel="shortcut icon" href="../Basico/icons/jsicon.png" type="image/x-icon">
+    <style>
+
+    </style>
+    <script>
+        window.onload = function (){
+            console.log('carregado'); //certeza que a função está funcionando
+            let d1 = document.getElementById('d1') // selcionando o elemento
+            let h1 = d1.children[0] // o evendo children retira o elemento filho em forma de array, que nesse casso seria o h1
+            let di = h1.parentElement // o elemento pai agora, nesse caso a div
+            console.log(h1);
+            console.log(di);
+        }
+
+        window.onload = function (){
+            let h1 = document.getElementsByTagName('h1') // retirando valor baseado na tag name do elemento, no caso h1
+
+            for(let h of h1){ 
+                console.log(h);
+                h.addEventListener('click', qop) // criando evento pelo JS e retornando uma mensação a função (evento, função)
+            }
+            function qop (e){
+                let t = e.target
+                console.log(t.parentElement); // quando o evento descrito acima for realizado essa função faz o elemento pai aparecer no console
+            }    
+        }
+    </script>
+</head>
+<body>
+    <div id="d1">
+        <h1>Titulo</h1>
+        <p>Qualquer texto</p>
+    </div>
+    <div id="d2">
+        <h1>Titulo 2</h1>
+        <p>Qualquer texto 2</p>
+    </div>
+</body>
+</html>

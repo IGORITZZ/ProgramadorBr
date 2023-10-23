@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAGINA SORTEIO</title>
+    <script>
+        function sortear(){
+            let np = 100
+            let ns = Math.round(Math.random()*np)
+            console.log(ns);
+            document.getElementById('d').innerHTML = ns
+            alert('O NUMERO SORTEADO É: ' + ns)
+        }
+        let pessoas= ['IGOR', 'MARCOS', 'LAURA', 'MIGUEL', 'SELMA']
+        function sortear2(){
+                let np = pessoas.length
+                let ns = Math.floor(Math.random()*np)
+                document.getElementById('d2').innerHTML  = pessoas[ns]
+                alert('O(a) SORTEADO É: ' + ns);
+                confirm('Parabéns ' + pessoas[ns] + ' , NÃO ESQUEÇA DO SEU PRÊMIO')
+        }
+    </script>
+</head>
+<body>
+    <h1 id="d2"></h1>
+    <h1 id="d"></h1>
+    <button onclick="sortear2()">SORTEAR</button>
+</body>
+</html>
+
+<!-- 
+       function sortear(){
+            let np = 100 // numero de numeros para serem sorteados
+            let ns = Math.round(Math.random()*np) // metodo para ter numeros de 0 a 100 de forma arredondada
+            console.log(ns); // impressão do numero sorteado
+            document.getElementById('d').innerHTML = ns // aletrar elemento HTML para aparecer o numero sorteado na tela
+            alert('O NUMERO SORTEADO É: ' + ns) // alerta de qual foi o numero sorteado
+        }
+        let pessoas= ['igor', 'marcos', 'laura', 'miguel', 'selma']  // simples Array com nome de sorteados
+        function sortear2(){
+                let np = pessoas.length // para ser selecionado o numero de pessoas do Array, vamos passar o atributo length
+                let ns = Math.floor(Math.random()*np) // floor garante que sempre vai arredondar o valor de acordo com length
+                document.getElementById('d').innerHTML  = pessoas[ns] // aqui para mudar o nome vamos passar a variavel e [ns], por conta do resultado ser extraido de um Array
+                alert('O(a) SORTEADO É:' + pessoa[ns]); // mensagem sobre o numero sorteado
+		alert('O(a) SORTEADO É: ' + ns + ' ' + pessoas[ns]); // mensagem sobre o numero e quem tem o numero
+		confirm('Parabéns ' + pessoas[ns] + ' , NÃO ESQUEÇA DO SEU PRÊMIO') // mensagem de confimação com nome do ganhador
+        }
+ -->

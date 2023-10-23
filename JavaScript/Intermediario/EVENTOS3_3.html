@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTO 3</title>
+    <link rel="shortcut icon" href="../Basico/icons/jsicon.png" type="image/x-icon">
+    <script>
+        function loaded(){
+            let t = document.getElementById('titulo')
+            //t.onclick = mudarText
+            t.addEventListener('mouseover', mudarText)
+            t.addEventListener('mouseout', outText)
+    }
+    function mudarText(){
+        this.innerHTML = 'NOVO TEXTO TESTE'
+    }
+    function outText(){
+        this.innerHTML = 'SAINDO PARA OUTRO TEXTO'
+    }
+    </script>
+</head>
+<body onload="loaded()"> 
+
+    <h1 id="titulo">TESTE</h1>
+
+</body>
+</html>
+
+<!-- 
+    o evento onload, ajuda o codigo JavaScript a ser executado, basicamente em ordem o código deveria estar depois dos elementos
+    html, como h1, mas esse evento ajuda o navegador ententer que tudo foi carregado e que mesmo o código JS estando acima
+    ele pode ser executado.
+ -->
+
+ <!-- 
+    onload="loaded()" quando o evento acontecer a função pode acontecer em seguida
+  -->
+
+  <!-- 
+            function loaded(){
+            let t = document.getElementById('titulo') 
+            t.innerHTML = 'rrr'
+    }
+
+    let t uma variavel local que vai receber o valor de um elemento peo ID
+    t.innerHTM a variavel local vai retornar um valor que vai receber agora 'rrr'
+
+    Vamos fazer diferente, inves da pagina atualizar e po texto receber um novo valor, agora somente após clicar no texto isso vai acontecer
+    t.onclick = mudarText agora a variavel t esta vai realizar evento de clique que recebe o valor de uma função mudarText.
+    Nesse caso mudarText esta sem os () justamente para não realizar a função, é somente para fazer menção a função, e ela ficar assim:
+    function mudarText(){
+        this.innerHTML = 'NOVO TEXTO TESTE'
+    }
+    this.innerHTML this novamente usado para dizer que é o elemento innerHTML que queremos.
+   -->
+   <!-- 
+    Outra maneira de se fazer isso, seria somente passar com o mouse em cima, bem como já vimos anteriormente.
+            function loaded(){
+            let t = document.getElementById('titulo')
+            t.addEventListener('mouseover', mudarText)
+            t.addEventListener('mouseout', outText)
+    }
+        Aqui chamamos os eventos pelo proprio codigo JS, mas graças ao elemento addEventListener, que funciona da seguite forma ('nome do evento', função),
+        dentro o evento não precisa ser escrito com letras maiusculas como mouseOver no código HTML, sendo tudo em minusculo.
+    function mudarText(){
+        this.innerHTML = 'NOVO TEXTO TESTE'
+    }
+    function outText(){
+        this.innerHTML = 'SAINDO PARA OUTRO TEXTO'
+    }
+
+    Fazendo a leitura do código entesmos que a pagina vai carregar com um texto padrão, ao passar o mouse por cima esse texto é alterado, e tirando mouse 
+    do texto ele muda novamente, porém seria outro texto, declarado na função outText
+    -->

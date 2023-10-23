@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOCAL STORAGE</title>
+    <style>
+
+    </style>
+    <script>
+        // localStorage.setItem() salva o intem na memoria
+        // localStorage.getItem() selciona o iteim salvo na memoria
+        // localStorage.removeItem() remove o item salvo na memoria
+        onload = function () {
+            let nome = localStorage.getItem('nome')
+            let h1 = document.getElementById('nome')
+            h1.innerHTML = nome
+        }
+        function atualizar(element){
+            let valor = element.value
+            console.log(valor);
+
+            let h1 = document.getElementById('nome')
+            h1.innerHTML = valor
+
+            localStorage.setItem('nome', valor)
+        }
+    </script>
+</head>
+<body>
+    <h1 id="nome"></h1>
+    <input type="text" oninput="atualizar(this)">
+</body>
+</html>
+
+
+
+<!--
+localStorage.setItem() salva o intem na memoria
+localStorage.getItem() selciona o iteim salvo na memoria
+localStorage.removeItem() remove o item salvo na memoria
+localStorage.clea() sem precisar de argumentos, remove tudo que foi salvo na memoria
+
+onload = function () {
+    let nome = localStorage.getItem('nome')
+    let h1 = document.getElementById('nome')
+    h1.innerHTML = nome
+}
+onload serve para que toda vez que a pagina atualizar rodar essa função primeiro, e oque diz essa função:
+let nome = localStorage.getItem('nome'), uma variavel local para buscar o valor 'nome' que esta salvo na memoria
+let h1 = document.getElementById('nome'), buscar o elemento que gera o valor de nome
+h1.innerHTML = nome, atualizar o texto com base no valor de nome.
+
+function atualizar(element){
+    let valor = element.value
+    console.log(valor);
+vai retornar o valor do elemento, e como tem um unico elemento usando para saber o valor tudo que for digitado na tela, vai ser impresso no console automaticamente.
+    let h1 = document.getElementById('nome')
+    h1.innerHTML = valor
+variável local para saber o valor 'nome' e substituir por um valor inserido e que foi digitado na tela, graças a variavel valor
+    localStorage.setItem('nome', valor)
+para gravar a variavel, que entre parenteses (cahve, valor), ou seja, primeiro uma chave para identificar valor e depois o valor que queremos armazenar
+} -->
+
+
+ 

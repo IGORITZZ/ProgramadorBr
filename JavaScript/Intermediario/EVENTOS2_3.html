@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../Basico/icons/jsicon.png" type="image/x-icon">
+    <title>EVENTOS 2</title>
+</head>
+    <script>
+        function onOver(elemento){
+            elemento.style.backgroundColor = 'red'
+        }
+        function onOut(elemento){
+            elemento.style.backgroundColor = 'cornflowerblue'
+        }
+    </script>
+    <style>
+        img{
+            width: 200px;
+            margin-bottom: 25px;
+        }
+
+        div{
+            display: inline;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: cornflowerblue;
+            color: aliceblue;
+        }
+    </style>
+<body onload="console.log('Pagina Completamente Carregada');">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRppJthrfxuOzkJOsrHhgcaHx2Ueg3kDe43w&usqp=CAU" alt="PLANO DE FUNDO COLORIDO">
+    <br>
+    <div onmouseover="onOver(this)" onmouseout="onOut(this)">CLICK</div>
+</body>
+</html>
+
+<!-- 
+    Aqui vimos dois tipos de eventos novos que trabalham com mouse, e outro com tipo de mensagem para validade que tudo n apagina foi carregado:
+<body onload="console.log('Pagina Completamente Carregada');">, está justamente body porque tudo que é mostrado ao usário é que precisa de validação 
+para ser carregado, e é impressa uma mensagem no console somente após todos os elementos serem carregados em tela.
+
+<div onmouseover="onOver(this)" onmouseout="onOut(this)">CLICK</div>
+    onmouseover : quando o mouse estiver em cima do objeto ele vai ter um comportamento que graças ao this, conseguimos pegar esse elemento 
+e criar um efeito quando estiver passando por cima. Mas note que quando tiramos o mouse de cima o efeito não some de forma automatica, e para isso precisamos
+chamar outro evento e criar uma nova função para ele
+    onmouseout : quando o mouse não estiver mais em cima do objeto ele vai ter outro comportamento.
+
+        function onOver(elemento){
+            elemento.style.backgroundColor = 'red'
+        }
+        function onOut(elemento){
+            elemento.style.backgroundColor = 'cornflowerblue'
+        }
+	Aqui as duas funções tem o mesmo objetivo, usando this juntos com os eventos conseguimos capturar os elementos e assim podemos usar funtion de maneira simples.
+	Aqui além do elemento style, estamos usando uma de suas propriedades backgroundColor, que corresponde ao CSS background-color, só que para o código JS
+	precisar ser backgroundColor ou o console vai retornar uma mensagem de erro
+ -->

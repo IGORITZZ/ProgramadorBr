@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./icons/outline_outdoor_grill_black_24dp2.png" type="image/x-icon">
+    <title>Churrascometro</title>
+</head>
+
+<body>
+    <div class="conteiner">
+        <h1>Churrascometro</h1>
+        <input type="number" name="adultos" id="adultos" placeholder="Adultos" required>
+        <input type="number" name="criancas" id="criancas" placeholder="Crianças">
+        <input type="number" name="duracao" id="duracao" placeholder="Duração" required>
+        <button onclick="calcular()">CALCULAR</button>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js" onclick="result()"></script>
+</body>
+
+</html>

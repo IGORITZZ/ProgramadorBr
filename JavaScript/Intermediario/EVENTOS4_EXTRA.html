@@ -1,0 +1,39 @@
+<!-- COMPARANDO MANEIRAS DE CRIAR EVENTOS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparando</title>
+    <link rel="shortcut icon" href="../Basico/icons/jsicon.png" type="image/x-icon">
+    <script>
+        function f(e){
+            console.log('teste') // confirmação para que a função esta funcionando de maneira correta 
+            console.log(this) // nesse casso para indicar qual elemento é da função, porém retorna um objeto
+            console.log(e) // mostra erro por conta do argumento vazio na chamada da função no argumento do elemento onclick='f()'
+        }
+        function f1(e){
+            console.log('teste 2') //  confirmação que a c=função ta funcionando
+            console.log(this) // nesse caso retorna vai retornar o elemnto h1 completo, porque estamos usando pelo js direto
+            console.log(e) // por conta da ação acima, vai retornar o evento que esta acontecendo naquele elemento
+        }
+        window.onload = function() // função vazia propositalmente
+        // aqui o objeto windon recebele o evento onload, window.onload, para garantir que o código JS execute após o carregamento da página
+        {
+            let h1 = document.getElementsByTagName('h1')[0] // ja vimos que serve para pegar um determinado elemento
+            h1.addEventListener('click', f1) // aqui o vendo onclick, é passado somente 'click'
+        }
+    </script>
+</head>
+<body>
+    <h1 onclick="f(this)">TITULO</h1> 
+    <!-- ao colocar this a função vai conseguir retornar esse elemento h1, e não mais o objeto completo -->
+</body>
+</html>
+
+<!-- 
+    Vimos aqui formas diferentes formas que podemos criar eventos, e melhor para que this vai ser usado 
+    Além de usar o onload em body podemos tambem usar diretamente no código JS graças ao elemento windon, assim ficando possivel 
+    realizar o código após o carregamento da página.
+ -->

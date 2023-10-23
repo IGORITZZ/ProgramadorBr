@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <script>
+        let a = {
+            nome: 'IGOR',
+            nota: 8.5
+        }
+
+        let b = JSON.stringify(a) // trabaforma o objeto em uma string
+
+        console.log(a);
+        console.log(b);
+        
+        let c = '{"nome":"FABIO", "nota": 9.7}'
+        let d = JSON.parse(c) // transforma tudo que for string em um objeto
+        
+        console.log(c);
+        console.log(d);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
