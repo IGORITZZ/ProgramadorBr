@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: relative;
+            width: 640px;
+            height: 360px;
+        }
+        .video{
+            width: 100%;
+            border-radius: 10px;
+        }
+        .controle{
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            /* background-color: red; */
+            text-align: center;
+            opacity: 0;
+        }
+        .controle:hover{
+            cursor: pointer;
+            opacity: 100%; 
+        }
+        .btn{
+            position: relative;
+            width: 30px;
+            top: 100%;
+            transform: translateY(-125%);
+            background-color: #ffffff42;
+            border-radius: 50%;
+        }
+        .btn:hover{
+            background-color: #ffffffad;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <video id="video1" class="video" src="../ex01/video/AT-cm_4g01_tFc2zfy38buTHAChg.mp4"></video>
+
+        <div class="controle">
+            <img onclick="retroceder()" class="btn" src="images/voltar-10.png" alt="">
+            <img onclick="diminiurVel()" class="btn" src="images/diminuir-vel.png" alt="">
+            <img onclick="play()" class="btn" src="images/play.png" alt="">
+            <img onclick="stop()" class="btn" src="images/stop.png" alt="">
+            <img onclick="aumentarVel()" class="btn" src="images/aumentar-vel.png" alt="">
+            <img onclick="avancar()" class="btn" src="images/avançar-10.png" alt="">
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
