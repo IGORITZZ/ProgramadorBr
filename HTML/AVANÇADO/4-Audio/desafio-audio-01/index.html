@@ -26,20 +26,20 @@
     Criar os mesmo comandos de audi que foram criados em video por meio de JS
     -->
     <div class="container">
-        <audio controls>
-            <source src="audio/desafioi-01.mp3">
-            <source src="audio/desafioi-01.ogg">
+        <audio controls preload="none" id="audio1">
+            <source src="audio/BRASIL GARFADO, MENINO ENDRICK ILUMINADO, DORIVAL EMBRAZADO! (react Espanha 3 X 3 Brasil).mp3">
+            <source src="audio/BRASIL GARFADO, MENINO ENDRICK ILUMINADO, DORIVAL EMBRAZADO! (react Espanha 3 X 3 Brasil).ogg">
     </audio>
     <div class="controle">
-        <img class="btn" src="images/aumentar-vel.png" alt="">
-        <img class="btn" src="images/avançar-10.png" alt="">
-        <img class="btn" src="images/play.png" alt="">
-        <img class="btn" src="images/stop.png" alt="">
-        <img class="btn" src="images/voltar-10.png" alt="">
-        <img class="btn" src="images/diminuir-vel.png" alt="">
+        <img onclick="aumentarVel()" class="btn" src="images/aumentar-vel.png" alt="">
+        <img onclick="avancar()" class="btn" src="images/avançar-10.png" alt="">
+        <img onclick="play()" class="btn" src="images/play.png" alt="">
+        <img onclick="stop()" class="btn" src="images/stop.png" alt="">
+        <img onclick="voltar()" class="btn" src="images/voltar-10.png" alt="">
+        <img onclick="diminuirVel()" class="btn" src="images/diminuir-vel.png" alt="">
     </div>
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>
 
