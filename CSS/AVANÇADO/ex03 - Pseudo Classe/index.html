@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS -Pseudo Classes</title>
+    <title>CSS - Pseudo Classes</title>
     <style>
+        /* nesse caso a pseudo classe é chamada pelo sinal de : */
+        /* :focus tudo que está em foco, ou com o campo de texto ativo tera a cor vermelha, mas quando não estiver mais ativo retornará para a cor padrão */
         input:focus{
             color: red;
         }
+        /* o primeiro filho do elemento ira ter a cor alterada, mas precisa ser filho do elemento do mesmo tipo, nesse caso o pai é ul então o primeiro filho ser sempre li */
         li:first-child {
             color: blue;
         }
+        /* aqui o primeiro elemento de qualquer tipo, nesse caso temos um h1 antes mesmo o li */
         li:first-of-type {
             color: blue;
         }
+        /* aqui temos um jeito de pular e chamar somente o terceiro elemento filho, ou seja o terceiro li */
         li:nth-child(3){
             color: red;
         }
+        /* o mesmo que o anterior, porém qualquer elemento filho de qualquer tipo, nesse caso o resultado sera diferente do anterior porque temos h1 antes do primeiro li */
         li:nth-of-type(3){
             color: green;
         }
+        /* aqui é contando do ultimo elemento, ou seja de baixo para cima */
         li:nth-last-child(2){
             color: red;
         }
+        /* também debaixo para cima */
         li:nth-last-of-type(4){
             color: purple;
         }
