@@ -15,10 +15,18 @@
         <h6 title="textp 1">Título 6</h6>
     </div>
     <script>
+        /* 
+            Aqui podemos ver que o modo de capturar um atributo é bem simples, e são feitos de dois jeitos
+            document.querySelector("[ATRIBUTO]") vai caputrar apenas o primeiro elemento com esse atributo
+            ocument.querySelectorAll("[ATRIBUTO]") irá capturar todos os elementos com esse atributo
+            Podemos também ultilizar como no CSS querySelectorAll("[title*=tu]") que ira capturar os elementos em questão
+        */
         let title = document.querySelector("[title]")
         let tlt = document.querySelectorAll("[title]")
+        let tl = document.querySelectorAll("[title*=tu]")
         console.log(title);
         console.log(tlt);
+        console.log(tl);
     </script>
 </body>
 </html>
