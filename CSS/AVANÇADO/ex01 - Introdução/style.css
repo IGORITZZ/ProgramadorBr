@@ -1,0 +1,52 @@
+/* 
+    um pseudo elemento é sinalizado pelo uso de ::
+    aqui chamamos a tag e utilizamos esses pseudos elementos
+*/
+
+p::first-line{
+    /* 
+        tudo que for a primeira linha irá alterar, no caso a cor do tecto irá ficar vermelha
+    */
+    color: red;
+}
+p::first-letter{
+    /* 
+        aqui a alteração sera na primeira letra do texto
+    */
+    color: blue;
+    font-size: 3rem;
+}
+p::selection{
+    /* 
+        irá aterar o modo de seleção, no caso o texto selecionado irá ser alterado
+    */
+    background-color: rgba(0, 0, 0, 0.331);
+    color: white;
+}
+    
+li{
+    list-style: none;   
+}
+li::before{
+    /* 
+        aqui estamos alterando o style da lista para uma imagem, e before muda tudo que dor antes do elemento
+    */
+    content: '';
+    /* como se fosse uma string vazia para inserir um valor */
+    display: inline-block;
+    /* como vamos trabalhar com uma imagem, precisamos dizer o tipo do display */
+    width: 20px;
+    height: 20px;
+    background-image: url(imagens/logo-google.png);
+    background-repeat: no-repeat;
+    /* para que a imahem não se repita */
+    background-position: center;
+    /* para que a imagem fique ao centro */
+    background-size: cover;
+    /* aqui a imagem preenche todo o tamanho definido para ela */
+    margin-right: 10px;
+    margin-bottom: 5px;
+    /* 
+        podemos usar o after também, e irá realizar as mesmas alterações, porém após o texto
+    */
+}

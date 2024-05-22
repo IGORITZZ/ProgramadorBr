@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Multiplos Seletores</title>
+    <style>
+        /* agora se invés de uma virgula, for somente um espaço? o resultado é totalmente diferente */
+        /*  o CSS irá entender que totas as TAG p dentro de qualquer TAG header, irá receber o CSS, mas e se isso for aplicada com id ou class?  */
+        header p {
+            background-color: green;
+        }
+        #head p{
+            background-color: rebeccapurple;
+        }
+
+    </style>
+</head>
+<body>
+    <header id="head">
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <section>
+            <p>Parágrafo 4</p>
+            <p>Parágrafo 5</p>
+            <p>Parágrafo 6</p>
+        </section>
+    </header>
+    <header>
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <section>
+            <p>Parágrafo 4</p>
+            <p>Parágrafo 5</p>
+            <p>Parágrafo 6</p>
+        </section>
+    </header>
+    <header>
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <section>
+            <p>Parágrafo 4</p>
+            <p>Parágrafo 5</p>
+            <p>Parágrafo 6</p>
+        </section>
+    </header>
+</body>
+</html>

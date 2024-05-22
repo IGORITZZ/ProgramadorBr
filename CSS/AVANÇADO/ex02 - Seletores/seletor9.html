@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Seletor Atributo</title>
+    <style>
+        /* temos algumas váriações para seletores multiplos quando falamos de seletor de atributo */
+        /* ~=  seleciona o atributo que tenha o mesmo nome */
+        [title~="titulo"],[width="300"]{
+            background-color: green;
+        }
+        /* ^= seleciona o atributo que contenha as mesmas "letras" */
+        [title^="t"],[width="300"]{
+            background-color: green;
+        }
+        /* $= seleciona os atributos que terminem com determinado valor */
+        [title$="1"],[width="300"]{
+            background-color: purple;
+        }
+        /* seleciona o atributo que contenha o mesmo valor ou que seja parecido em seu nome */
+        [title*="tu"],[width="300"]{
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+        <h1 title="titulo 1">Título 1</h1>
+        <h2>Título 2</h2>
+        <h3 title="titulo 2">Título 3</h3>
+        <h4>Título 4</h4>
+        <h5>Título 5</h5>
+        <h6 title="textp 1">Título 6</h6>
+    </div>
+</body>
+</html>

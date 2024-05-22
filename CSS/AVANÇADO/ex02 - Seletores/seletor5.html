@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Seletor maior que ></title>
+    <style>
+        /* o sinal de maior que > indica que tudo que foi filho da TAG sera alterado, se por acaso a TAG p em header for filha de outra TAG, ela não receberá o CSS */
+        div > p{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <p>Parágrafo 4</p>
+        <section>
+            <p>Parágrafo 5</p>
+            <p>Parágrafo 6</p>
+        </section>
+    </div>
+    <div>
+        <p>Parágrafo 1</p>
+        <p>Parágrafo 2</p>
+        <p>Parágrafo 3</p>
+        <p>Parágrafo 4</p>
+        <p>Parágrafo 5</p>
+        <p>Parágrafo 6</p>
+    </div>
+</body>
+</html>
