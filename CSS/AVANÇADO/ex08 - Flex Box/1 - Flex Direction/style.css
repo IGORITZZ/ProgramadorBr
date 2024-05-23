@@ -1,0 +1,25 @@
+/* o conceito de Flex Box nada mais é do que uma caixa felixivel, que possa alterar o seu comportamento para o conteudo de adapte da melhor forma com CSS */
+
+.conteiner{
+    /* sabemos que a maioria dos elementos tem por padrão o display block ou inline, e para confirguramos o Flex Box precisamos alterar o display para flex */
+    display: flex;
+    flex-direction: row; /* é o padrão, e altera o comportamento do obajeto na tela, fexendo com que os preenchimentos deçam até o final da tela, e somente a area do texto seja a sua largura */
+    /* flex-direction: column; esse alterar o comportamento na tela, deixando lado a lado */
+    /* flex-direction: column-reverse; flex-direction: row-reverse;  re presentam as duas configurações de maneira invetida*/
+    background-color: darkgray;
+    height: 400px;
+    color: white;
+}
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: blueviolet;
+}
+.react{
+    /* por mais que eu altere o Flex Box do elemento, eu posso forçar nele o tamanho que eu quero que ele tenha. */
+    width: 200px;
+}

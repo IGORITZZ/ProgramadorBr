@@ -1,0 +1,1 @@
+Importante quando estar configurando um projeto verificar a compatibilidade dos elementos com os demais navegadores que existem, por isso podemos pesquisar em sites que comparam a compatibilidade deles, como:

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Transformações</title>
+    <style>
+        .quad{
+            width: 350px;
+            height: 350px;
+            background-color: red;
+            /* 
+                são os modos de usar tranform para alterar uma imagem
+            */
+            transform: rotate(45deg); /* gerar uma ratação com a imagem, sempre se usa "deg" para declarar o valor */
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -o-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                /* todas as configurações acima são para a compatibilidade com navegadores mais antigos */
+            /* transform: scale(0.5, 3); aqui alterar a escala do elemento, multiplicando ele. E recebe dois valores largura e altura */
+            /* transform: skew(30deg, 20deg); aqui altera a perspectiva do objeto e recebe dois valores, e os dois devem ser declarados com "deg" */
+        }
+    </style>
+</head>
+<body>
+    <div class="quad"></div>
+</body>
+</html>

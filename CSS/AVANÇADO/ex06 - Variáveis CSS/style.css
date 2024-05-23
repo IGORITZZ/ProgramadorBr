@@ -1,0 +1,34 @@
+/* 
+    :root é um pseudo elemento que altera o nosso HTML, porém vamos usar para armazenar valores em variáveis
+    váriaveis CSS são decladar com --
+    exemplo --nomeváriavel: valor;
+    isso altera na praticidade para aterar valor de vários objetos ao mesmo tempo, ou até mesmo ajudando na práticidade de escrever ó código já que o valor já esta armazenado
+*/
+:root{
+    --cor1: beige;
+    --cor2: orange;
+    --fonts: 45px;
+    --squaresize: 250px;
+}
+
+.p1{
+    color: var(--cor1);   
+    font-size: var(--fonts);
+}
+.p5{
+    color: var(--cor2);
+}
+.p6{
+    color: var(--cor1);
+}
+
+.squad1{
+    width: var(--squaresize);
+    height: var(--squaresize);
+    background-color: var(--cor1);
+}
+.squad2{
+    width: var(--squaresize);
+    height: var(--squaresize);
+    background-color: var(--cor2);
+}
