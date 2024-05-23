@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: beige;
+}
+.primeira{
+    /* 
+        aqui o objeto permacesse no meio, mas sua relação com a lateral semore vai permancer a mesma
+        o valor de 100px reprenta meta de cada lado, ou seja, 50px direita moais 50px da esquerda.
+        já 0 100% representa o tamanho total do obejto para ser levado em consideração
+    */
+    width: calc(100% - 100px);
+    height: 100px;
+    margin: auto;
+    background-color: red;
+
+}

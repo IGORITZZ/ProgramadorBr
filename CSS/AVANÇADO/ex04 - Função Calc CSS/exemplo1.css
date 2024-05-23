@@ -1,0 +1,29 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: orange;
+}
+.container{
+    width: 100%;
+    background-color: red;
+}
+.primeira{
+    /* 
+        inline-block para que os objetos fiquem na mesma linha se tiverem tamanhos compativeis para isso, porém essa configuração adiciona 4x de margin
+        aqui estamos calculando o total do objeto -300px para que o quadrado verde que tem esse tamanho caiba ao lado, e calc faz que ele permaneca no mesmo local idependente do tamanho da janela.
+    */
+    display: inline-block;
+    margin-right: -4px;
+    margin-bottom: -4px;
+    width: calc(100% - 300px);
+    height: 300px;
+    background-color: yellow;
+}
+.segunda{
+    margin-right: -4px;
+    margin-bottom: -4px;
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+    background-color: green;
+}
