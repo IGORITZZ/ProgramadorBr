@@ -1,12 +1,21 @@
 .conteiner{
-
     display: flex;
-    flex-direction: row; 
-    flex-wrap: wrap;
 
-    
-
-
+    justify-content: center;
+    /* 
+    center, centraliza os elementos na tela;
+    end ou flex-end, entende aonde fica a posição final do objeto e o fixa nesse local;
+    start ou flex-start, entende aonde fica a posição incial do objeto e o fixa lá;
+    space-around, cria uma espécie de margin igual entre os objetos;
+    space-between, novamente cria uma espécie de margin igual entre os objetos, porém não leva em conta o elemento pai;
+    space-evenly, cria uma espécie de margin igual entre os objetos, porém de maneira igual para todos os lados;
+    stretch, é o valor padrão para o justify-content;
+    */
+    align-items: center;
+    /* 
+    center, alinha os objetos na metade do elemento pai, mas para deixar ao centro basta aplicar justify-content: center mesmo que seja  flex-direction: row ou column;
+    todos os outros valores tem a reação parecida com o /* justify-content;
+     */
     background-color: darkgray;
     height: 400px;
     color: white;
