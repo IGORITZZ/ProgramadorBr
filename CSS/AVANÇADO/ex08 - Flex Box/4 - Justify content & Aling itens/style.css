@@ -14,7 +14,7 @@
     align-items: center;
     /* 
     center, alinha os objetos na metade do elemento pai, mas para deixar ao centro basta aplicar justify-content: center mesmo que seja  flex-direction: row ou column;
-    todos os outros valores tem a reação parecida com o /* justify-content;
+    todos os outros valores tem a reação parecida com o justify-content;
      */
     background-color: darkgray;
     height: 400px;
