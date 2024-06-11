@@ -1,0 +1,29 @@
+.conteiner{
+    display: flex;
+
+
+    background-color: darkgray;
+    height: 290px;
+    color: white;
+}
+/* 
+    Podemos mudar a ordem dos elementos desde que o elemento pai seja display: flex;
+    Dito isso, vamos enter que todo elemento tem pro padrão o valor 0
+    Usando a propriedade ORDEM pemos realizar uma sequencia diferente, sem alterar nada no HTML
+*/
+.r1{
+    order: 3;
+    background-color: red;
+}
+.r2{
+    order: 3;
+    background-color: blue;
+}
+.r3{
+    order: 1;
+    background-color: blueviolet;
+}
+.react{
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,29 @@
+.conteiner{
+    display: flex;
+
+
+    background-color: darkgray;
+    height: 290px;
+    color: white;
+}
+/* 
+    Essa duas propriedades, flex-grow e  flex-shrink vão sempre receber os mesmos valores 0 e 1
+    Em  flex-shrink o valor 0 não permite que o objeto diminuia em relação ao tamanho da tela, ja o valor padrão 1 permite que isso aconteça
+    Em flex-grow 0 (valor padrão) faz com que o elemento fique no seu tamanho máximo e estático idependente do tamanho da tela e 1 não permita que isso aconteça
+*/
+.r1{
+
+    background-color: red;
+}
+.r2{
+
+    background-color: blue;
+}
+.r3{
+    /* flex-grow: 1; */
+    background-color: blueviolet;
+}
+.react{
+    width: 100px;
+    height: 100px;
+}
