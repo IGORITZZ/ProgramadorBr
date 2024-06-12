@@ -1,7 +1,6 @@
 .conteiner{
     display: flex;
 
-
     background-color: darkgray;
     height: 290px;
     color: white;
@@ -10,6 +9,8 @@
     background-color: red;
 }
 .r2{
+    align-self: center;
+    /* essa propriedade é usada quando queremos mudar o posicionamento de apenas um dos elementos da pagina */
     background-color: blue;
 }
 .r3{
