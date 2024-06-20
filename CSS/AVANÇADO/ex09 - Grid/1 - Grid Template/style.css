@@ -1,0 +1,37 @@
+.container{
+    color: white;
+    display: grid;
+    padding: 10px;
+    background-color: gray;
+    /* o grid é totalmente diferente de FlexBox, e literalmente cria um grid (ou tabela) para os elementos, com linhas e colunas */
+    /* grid-template-rows: auto auto;
+        grid-template-rows podemos criar linhas, e cada novo valor representa uma nova linha, como grid-template-rows: auto; seria apenas uma linha, ou grid-template-rows: auto auto auto; seriam tres linhas.
+    grid-template-columns: auto auto auto; 
+        o mesmo acontece com grid-template-columns, e cada valor representado se torna uma nova coluna
+    */
+    /* 
+        grid tem seu proria maneira de calcular seu tamanho, seriam eles;
+            auto: calcula o tamanho de forma automatica e nunca deixando um maior que o outro, ou ser maior que o elemento pai.
+            %: podemos definir o tamanho de cada linha(row) ou coluna(cloumns) usando porcentagem(%), mas a soma dos elementos não pode ser maior que 100%.
+            px: podemos definir o tamanho de cada linha(row) ou coluna(cloumns) em pixels(px), mas tornaria a linha(row) ou coluna(cloumns) fixa, e se a soma dos elementos for maior que o elemento pai, irá fugir desse elemento pai, quebrando o layout.
+            fr: podemos definir o tamanho de cada linha(row) ou coluna(cloumns) em fração(fr), ou seja, o elemento teria um fração do todo, ou uma fração em relação ao elemendo do mesmo tipo que ele, e diferente do pixel(px), esse valor não é fixo então não quebraria o layout, sendo ajusatavel ao tamanho da tela.
+    */
+    grid-template: auto auto / auto auto auto;
+    /* 
+        grid-template é uma shor shorthand para grid-template-rows e grid-template-columns, aonde o primeiro valor sempre será para linha(row) e após a barra(/) sera o valor para
+        coluna(cloumns).
+    */
+}
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: green;
+}
+.rect{
+    /* width: 100px;
+    height: 100px; */
+}
