@@ -1,0 +1,32 @@
+.container{
+    height: 500px;
+    color: white;
+    display: grid;
+    padding: 10px;
+    background-color: gray;
+   
+    grid-template: auto auto / auto auto auto;
+    justify-items: center;
+    align-items: center;
+
+    justify-content: center;
+    align-content: center;
+    /* 
+        Diferente de justify-items e align-items que levam em consideração to tamanho do conteiner, justify-content e align-content leva em conta o tamanho do grid e de seus elementos, então não faz muito sentido aplicar um juntamnete do outro
+    */
+
+    grid-gap: 10px;
+}
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: green;
+}
+.rect{
+    width: 100px;
+    height: 100px;
+}

@@ -1,0 +1,21 @@
+.container{
+    color: white;
+    display: grid;
+    padding: 10px;
+    background-color: gray;
+   
+    grid-template: 100px 100px / 1fr 2fr 1fr;
+    grid-gap: 10px;
+    /* 
+         grid-gap é resposavel por criar um espaçamento entre os objetos dentro do grid, podemos usar o grid em row e columns, mas há um shorthand para isso. Literamente é o grid-gap. De forma individual seria   grid-row-gap; ou grid-column-gap.
+    */
+}
+.r1{
+    background-color: red;
+}
+.r2{
+    background-color: blue;
+}
+.r3{
+    background-color: green;
+}
