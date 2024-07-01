@@ -5,18 +5,15 @@
     padding: 10px;
     background-color: gray;
    
-    grid-template: auto auto / auto auto auto;
-    justify-items: center;
-    align-items: center;
-
-    justify-content: center;
-    align-content: center;
-    /* 
-        Diferente de justify-items e align-items que levam em consideração to tamanho do conteiner, justify-content e align-content leva em conta o tamanho do grid e de seus elementos, então não faz muito sentido aplicar um juntamnete do outro
-    */
-
-    grid-gap: 10px;
+    grid-template-areas: "a1 a1 a1 a2 a2 a2"
+                         "a3 a3 a3 a4 a4 a6"
+                         "a5 a5 a5 a5 a5 a5";
 }
+    /*  
+        Aqui com grid-template-areas conseguimos reposicionar os elementos apenas usando os seletores.
+        Temos que tomar certos cuidados, pois o não uso de um dos seletores pode "quebrar a tela" deixa um dos elementos soltos ou fora do padrão da página
+        Da maneira que os seletores estão distribuidos em grid-template-areas temos o formato de 6 espços de linha por 3 espaços de coluna, sendo uma divisão de linhaXcoluna.
+    */
 .r1{
     background-color: red;
 }
@@ -26,7 +23,22 @@
 .r3{
     background-color: green;
 }
-.rect{
-    width: 100px;
-    height: 100px;
+/* Para grid-area, por mais que o nome do seletor pareça uma string (de fato é), não vamos usar aspas*/
+.item1{
+    grid-area: a1;
+}
+.item2{
+    grid-area: a2;
+}
+.item3{
+    grid-area: a3;
+}
+.item4{
+    grid-area: a4;
+}
+.item5{
+    grid-area: a5;
+}
+.item6{
+    grid-area: a6;
 }
