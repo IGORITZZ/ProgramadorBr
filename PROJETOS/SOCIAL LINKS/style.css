@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tenorite';
+}
+html{
+    font-size: 16px;
+    height: 100vh;
+}
+body{
+    height: 100%;
+    background-image: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    max-width: 540px;
+    margin: auto;
+    padding: 20px;
+    color: white;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.gradiente{
+    background: linear-gradient(to right, #5578BA, #40A376);
+}
+.foto-perfil{
+    width: 120px;
+    border-radius: 50%;
+}
+.user{
+    font-weight: 400;
+    font-size: 2em;
+    margin: 16px 0;
+}
+.descricao{
+    font-size: 1.2em;
+    color: #919193;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+.lista{
+    list-style: none;
+    display: flex;
+    flex-direction: column;   
+    margin: 2em 0;
+    gap: 1.5em;
+}
+.item-lista{
+    font-size: 1.2em;
+    height: 4em;
+    border-radius: 2em;
+    display: flex;
+}
+.link{
+    padding: 0 45px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+}
+.link > img{
+    width: 1.2em;
+}
+footer{
+    display: flex;
+    gap: 1.5em;
+}
+.contato{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 1em;
+    border-radius: 50%;
+}
+.contato > img{
+    width: 2em;
+}
+
+@media screen and (max-width: 812px) {
+    html{
+        font-size: 20px;
+    }
+}
